@@ -1,52 +1,51 @@
-package br.ufpb.javasport;
+package br.ufpb.sistime;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Time {
-	private String nomeTime;
-	private String estadio;
-	private String classificacao;
+	private int qtdGols;
 	private List<Jogador> jogadores;
+	private final int qtdJogadores = 11;
+	private String nomeTime;
+	private int pontos;
 	
-	public Time(String nome, String estadio, String classificacao){
-		this.nomeTime = nome;
-		this.estadio = estadio;
-		this.classificacao = classificacao;
+	public Time(String nomeTime, int qtdGols){
+		this.qtdGols = qtdGols;
+		this.nomeTime = nomeTime;
 		jogadores = new ArrayList();
+		inicializarJogadores();
 	}
 	
-	public String getNomeTime(){
-		return this.nomeTime;
+	public String getNomeTime() {
+		return nomeTime;
 	}
 	
-	public void setNomeTime(String novoNome){
-		this.nomeTime = novoNome;
+	public void setNomeTime(String nomeTime) {
+		this.nomeTime = nomeTime;
 	}
 	
-	public String getEstadio(){
-		return this.estadio;
-	}
-	
-	public void setEstadio(String novoEstadio){
-		this.estadio = novoEstadio;
-	}
-	
-	public String getClassificacao(){
-		return this.classificacao;
-	}
-	
-	public void setClassificacao(String novaClassificacao){
-		this.classificacao = novaClassificacao;
-	}
-	
-	public String toString(){
-	String escalacao = "";
-		for(Jogador a: jogadores){
-			escalacao += a.getNome()+ " ";
-		}
-		return "Time: "+this.nomeTime+ " Estádio: "+this.estadio+ " Classificação: "+this.classificacao + " Escalação: "+escalacao;
+	public int getQtgGols() {
+		return qtdGols;
 	}
 
+	public void setQtgGols(int qtdGols) {
+		this.qtdGols = qtdGols;
+	}
+
+	public int getPontos() {
+		return pontos;
+	}
+
+	public void setPontos(int pontos) {
+		this.pontos = pontos;
+	}
+
+	public void inicializarJogadores(){
+		for(int k = 0; k < qtdJogadores; k++){
+			Jogador j = new Jogador();
+			jogadores.add(j);
+		}
+	}
 
 }

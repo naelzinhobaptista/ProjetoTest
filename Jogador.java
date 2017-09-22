@@ -1,32 +1,38 @@
-package br.ufpb.javasport;
+package br.ufpb.sistime;
 
 public class Jogador {
 	private String nome;
-	private String time;
+	private int numero;
+	private Posicao pos;
 	
-	public Jogador(String nome, String time, int idade){
+	public Jogador(String nome, int numero, Posicao pos){
 		this.nome = nome;
-		this.time = time;
+		this.numero = numero;
+		this.pos = pos;
+	}
+	public Jogador(){
+		
 	}
 	
-	public String getNome(){
-		return this.nome;
+	public Posicao getPos() {
+		return pos;
+	}
+	public void setPos(Posicao pos) {
+		this.pos = pos;
+	}
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public int getNumero() {
+		return numero;
+	}
+	public void setNumero(int numero) {
+		this.numero = numero;
 	}
 	
-	public void setNome(String novoNome){
-		this.nome = novoNome;
-	}
 	
-	public String getTime(){
-		return this.time;
-	}
 	
-	public void setTime(String novoTime){
-		this.time = novoTime;
-	}
-	
-	public String toString(){
-		return "Jogador: "+this.nome+" Funcionário do: "+this.time;
-	}
-
 }
