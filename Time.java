@@ -4,18 +4,43 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Time {
-	private int qtdGols;
 	private List<Jogador> jogadores;
 	private final int qtdJogadores = 11;
 	private String nomeTime;
-	private int pontos;
+	private int vitoria, empate, derrota, pontos;
 	
-	public Time(String nomeTime, int qtdGols){
-		this.qtdGols = qtdGols;
+	public Time(String nomeTime){
 		this.nomeTime = nomeTime;
 		jogadores = new ArrayList();
 		inicializarJogadores();
 	}
+	
+	
+	public int getVitoria() {
+		return vitoria;
+	}
+
+	public void setVitoria(int vitoria) {
+		this.vitoria = vitoria;
+	}
+
+	public int getEmpate() {
+		return empate;
+	}
+
+	public void setEmpate(int empate) {
+		this.empate = empate;
+	}
+
+	public int getDerrota() {
+		return derrota;
+	}
+
+	public void setDerrota(int derrota) {
+		this.derrota = derrota;
+	}
+
+	
 	
 	public String getNomeTime() {
 		return nomeTime;
@@ -25,13 +50,6 @@ public class Time {
 		this.nomeTime = nomeTime;
 	}
 	
-	public int getQtgGols() {
-		return qtdGols;
-	}
-
-	public void setQtgGols(int qtdGols) {
-		this.qtdGols = qtdGols;
-	}
 
 	public int getPontos() {
 		return pontos;
@@ -46,6 +64,12 @@ public class Time {
 			Jogador j = new Jogador();
 			jogadores.add(j);
 		}
+	}
+	
+	public String toString(){
+		return "Time "+this.nomeTime+ " Quantidade de pontos: "+this.getPontos()+"\nVitórias: "+this.vitoria+ "\n"
+				+ "Empates: "+this.empate+ "\nDerrotas: "+this.derrota;
+		
 	}
 
 }

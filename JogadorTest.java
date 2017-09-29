@@ -11,6 +11,7 @@ public class JogadorTest {
 		Jogador j = new Jogador("Martín Silva", 1, Posicao.GOLEIRO);
 		assertTrue(j.getNome().equals("Martín Silva"));
 		assertTrue(j.getNumero() == 1);
+		assertTrue(j.getPos() == Posicao.GOLEIRO);
 	}
 
 }
