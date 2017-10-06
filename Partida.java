@@ -1,7 +1,7 @@
 package br.ufpb.sistime;
 
 public class Partida {
-	private Time timeCasa, timeVis;
+	private static Time timeCasa, timeVis;
 	private int qtdGolsTimeCasa, qtdGolsTimeVis;
 	private String resultado;
 	
@@ -73,6 +73,7 @@ public class Partida {
 	public String Estatistica(){
 		return "Vitórias: "+this.timeCasa.getVitoria()+"\n"+"Empates: "+this.timeCasa.getEmpate()+"\n"+"Derrotas: "+this.timeCasa.getDerrota();
 	}
+	
 	
 
 	

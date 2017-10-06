@@ -21,7 +21,7 @@ public class Time {
 	}
 
 	public void setVitoria(int vitoria) {
-		this.vitoria = vitoria;
+		this.vitoria += vitoria;
 	}
 
 	public int getEmpate() {
@@ -29,7 +29,7 @@ public class Time {
 	}
 
 	public void setEmpate(int empate) {
-		this.empate = empate;
+		this.empate += empate;
 	}
 
 	public int getDerrota() {
@@ -37,7 +37,7 @@ public class Time {
 	}
 
 	public void setDerrota(int derrota) {
-		this.derrota = derrota;
+		this.derrota += derrota;
 	}
 
 	

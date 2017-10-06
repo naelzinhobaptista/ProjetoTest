@@ -6,6 +6,8 @@ import javax.swing.JOptionPane;
 
 public class Main {
 
+	private static GerenciaDePartida gerente = new GerenciaDePartida();
+	
 	public static void main(String[] args) {
 
 		boolean sair = false;
@@ -21,6 +23,12 @@ public class Main {
 			case "1":
 				
 				String timeCasa = JOptionPane.showInputDialog("Informe o time da casa: ");
+				/*List<Partida> pp = gerente.getPartidas();
+				for(Partida par: pp){
+					if(par.getTimeCasa().getNomeTime().equals(timeCasa)){
+						par.getTimeCasa().setVitoria(par.getTimeCasa().getVitoria()+ 1);
+					}
+				}*/
 				int quantGolsCasa = Integer
 						.parseInt(JOptionPane.showInputDialog("Quantos gols o " + timeCasa + " marcou? "));
 
