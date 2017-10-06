@@ -53,9 +53,8 @@ public class Main {
 				String nomeTime = JOptionPane.showInputDialog("Informe o nome do time: ");
 				List<Partida> lista = g.getPartidas();
 				for(Partida pa: lista){
-					pa.Resultado();
 					if(pa.getTimeCasa().getNomeTime().equals(nomeTime)){
-						JOptionPane.showMessageDialog(null ,pa.getResultado());
+						JOptionPane.showMessageDialog(null ,pa.Estatistica());
 						break;
 					}
 				}

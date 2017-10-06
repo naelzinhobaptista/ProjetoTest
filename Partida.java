@@ -18,24 +18,26 @@ public class Partida {
 		this.qtdGolsTimeVis = qtdGolsTimeVis;
 	}
 	public void Resultado(){
+		
 		if(qtdGolsTimeCasa > qtdGolsTimeVis){
 			timeCasa.setPontos(timeCasa.getPontos()+ 3);
 			timeCasa.setVitoria(timeCasa.getVitoria()+ 1);
 			timeVis.setDerrota(timeVis.getDerrota() + 1);
-			resultado = "Vencedor: "+timeCasa.toString();
+			resultado = "Vitória do "+timeCasa+"\n"+timeCasa.toString()+" "+qtdGolsTimeCasa+" x "+qtdGolsTimeVis+" "+timeVis.toString();
 			
 		}else if(qtdGolsTimeVis > qtdGolsTimeCasa){
 			timeVis.setPontos(timeVis.getPontos()+ 3);
 			timeVis.setVitoria(timeVis.getVitoria()+ 1);
 			timeCasa.setDerrota(timeCasa.getDerrota() + 1);
-			resultado = "Vencedor: "+timeVis.toString();
+			resultado = "Vitória do "+timeVis+"\n"+timeVis.toString()+" "+qtdGolsTimeVis+" x "+qtdGolsTimeCasa+" "+timeCasa.toString();
 			
+			 
 		}else{
 			timeCasa.setPontos(timeCasa.getPontos() + 1);
 			timeVis.setPontos(timeVis.getPontos() + 1);
 			timeCasa.setEmpate(timeCasa.getEmpate()+ 1);
 			timeVis.setEmpate(timeVis.getEmpate() + 1);
-			resultado = "Empate";
+			resultado = "Empate\n "+ timeCasa.toString()+" "+qtdGolsTimeCasa+" x "+qtdGolsTimeVis+" "+timeVis.toString();
 		}
 }	
 
@@ -68,6 +70,10 @@ public class Partida {
 	public void setQtdGolsTimeCasa(int qtdGolsTimeCasa) {
 		this.qtdGolsTimeCasa = qtdGolsTimeCasa;
 	}
+	public String Estatistica(){
+		return "Vitórias: "+this.timeCasa.getVitoria()+"\n"+"Empates: "+this.timeCasa.getEmpate()+"\n"+"Derrotas: "+this.timeCasa.getDerrota();
+	}
+	
 
 	
 }

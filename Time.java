@@ -67,8 +67,12 @@ public class Time {
 	}
 	
 	public String toString(){
-		return "Time "+this.nomeTime+ " Quantidade de pontos: "+this.getPontos()+"\nVitórias: "+this.vitoria+ "\n"
-				+ "Empates: "+this.empate+ "\nDerrotas: "+this.derrota;
+		return this.nomeTime;
+		
+	}
+	public String toString2(){
+		return "Até o momento o "+this.nomeTime+" tem um total de: "+this.vitoria+" vitórias\n"
+				+this.empate+" empates e\n"+this.derrota+" derrotas";
 		
 	}
 
